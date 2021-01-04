@@ -6,7 +6,7 @@ import './App.css';
 function loadProjects(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "http://localhost:8000/projects/"
+  const url = "https://gasinc.herokuapp.com/projects/"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -23,7 +23,7 @@ xhr.send()
 function loadImages(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "http://localhost:8000/images/"
+  const url = "https://gasinc.herokuapp.com/images/"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -80,7 +80,7 @@ function App() {
                 // if(){
               return( 
                 
-                  <img src={`http://127.0.0.1:8000${image.image}`}/>
+                  <img src={`https://gasinc.herokuapp.com${image.image}`}/>
                 
           
                 )
