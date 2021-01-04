@@ -120,6 +120,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+django_heroku.settings(locals())
 
 
 # Static files (CSS, JavaScript, Images)
@@ -140,5 +141,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'build', 'media')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-
-django_heroku.settings(locals())
