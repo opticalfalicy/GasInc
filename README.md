@@ -68,3 +68,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+Helpful Reference Credits to:
+
+
+Django / React / Heroku Setup
+https://dev.to/shakib609/deploy-your-django-react-js-app-to-heroku-2bck
+
+First chunk of 
+https://www.youtube.com/watch?v=f1R_bykXHGE
