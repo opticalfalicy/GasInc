@@ -3,7 +3,7 @@ from django.db import models
 from django.conf import settings
 import random
 
-from taggit.managers import TaggableManager
+# from taggit.managers import TaggableManager
 # from tagging.registry import register
 
 # Create your models here.
