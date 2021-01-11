@@ -6,7 +6,8 @@ import './App.css';
 function loadProjects(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "https://gasinc.herokuapp.com/projects/"
+  // const url = "https://gasinc.herokuapp.com/projects/"
+  const url = "http://127.0.0.1:8000/projects/"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -16,14 +17,15 @@ xhr.onload = function() {
 // xhr.onerror = function (e) {
 //   callback({"message": "invalid request"}, 400)
 // }
-console.log(xhr)
+console.log('projects x', xhr)
 xhr.send()
 }
 
 function loadImages(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "https://gasinc.herokuapp.com/images/"
+  // const url = "https://gasinc.herokuapp.com/images/"
+  const url = "http://127.0.0.1:8000/images"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -33,7 +35,7 @@ xhr.onload = function() {
 // xhr.onerror = function (e) {
 //   callback({"message": "invalid request"}, 400)
 // }
-console.log(xhr)
+console.log('xhr', xhr)
 xhr.send()
 }
 
@@ -61,7 +63,7 @@ function App() {
 
 
   
-
+  console.log('p', projects)
   console.log(images)
   return (
     <div className="App">
@@ -80,7 +82,7 @@ function App() {
                 // if(){
               return( 
                 
-                  <img src={`https://gasinc.herokuapp.com${image.image}`}/>
+                  <img src={`http://127.0.0.1:8000${image.image}`}/>
                 
           
                 )
@@ -93,7 +95,8 @@ function App() {
             </li>
     
             )
-          })}
+          })
+          })
         </p>
       {/* </header> */}
     </div>
