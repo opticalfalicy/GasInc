@@ -21,6 +21,25 @@ console.log('projects x', xhr)
 xhr.send()
 }
 
+function loadMedia(callback){
+  const xhr = new XMLHttpRequest()
+  const method = 'GET' // 'POST'
+  // const url = "https://gasinc.herokuapp.com/projects/"
+  const url = "http://127.0.0.1:8000/media/"
+  const responseType = "json"
+  xhr.responseType = responseType
+xhr.open(method, url)
+xhr.onload = function() {
+  callback(xhr.response, xhr.status)
+}
+// xhr.onerror = function (e) {
+//   callback({"message": "invalid request"}, 400)
+// }
+// console.log('projects x', xhr)
+xhr.send()
+}
+
+
 function loadImages(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
@@ -41,7 +60,7 @@ xhr.send()
 
 
 function App() {
-  const [projects, setProjects] = useState([{name: 123}])
+  const [projects, setProjects] = useState([{name: "...loadingProjects..."}])
   useEffect(() => {
     const myCallback = (response, status) => {
 
@@ -49,6 +68,14 @@ function App() {
 
     }
     loadProjects(myCallback)
+  }, [])
+
+  const [media, setMedia] = useState([{name: "...loadingMedia..."}])
+  useEffect(() => {
+    const myCallback = (response, status) => {
+      setMedia(response);
+    }
+    loadMedia(myCallback)
   }, [])
 
   const [images, setImages] = useState([{}])
@@ -69,6 +96,18 @@ function App() {
     <div className="App">
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <nav className='navbar'>
+          <div className='nav-logo'><img className='nav-logo-image' src={`http://127.0.0.1:8000/media/logos/croplogo.png`} /></div>
+          <div className='nav-links'>
+            <ul className='links-list'>
+              <li className='list-item item-Projects'>Projects</li>
+              <li className='list-item item-Services'>Services</li>
+              <li className='list-item item-Blog'>Blog</li>
+              <li className='list-item item-History'>History</li>
+              <li className='list-item item-Contact'>Contact</li>
+            </ul>
+          </div>
+        </nav>
         <p className='projects'>
           {projects.map((project, index)=>{
             console.log(project)
@@ -96,7 +135,7 @@ function App() {
     
             )
           })
-          })
+          }
         </p>
       {/* </header> */}
     </div>

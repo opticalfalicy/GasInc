@@ -6,6 +6,41 @@
   color: white;
 }
 
+.navbar{
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+}
+
+.nav-logo{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
+.nav-logo-image{
+  width: 25rem;
+  height: 100%;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+.links-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 1.5rem;
+  list-style-type: none;
+  text-decoration: underline;
+}
+
 .projects {
   width: 100%;
   height: 100%;
