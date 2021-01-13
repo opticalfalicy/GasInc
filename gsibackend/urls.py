@@ -24,6 +24,7 @@ from django.conf import settings
 
 from .views import index
 from projects.views import home_view, project_list_view, project_image_view
+# from projects.views import home_view, project_list_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),

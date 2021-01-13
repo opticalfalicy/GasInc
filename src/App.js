@@ -88,6 +88,11 @@ function App() {
     loadImages(myCallback)
   }, [])
 
+  function idCheck(projects, images){
+    return ({
+      
+    })
+  }
 
   
   console.log('p', projects)
@@ -108,26 +113,29 @@ function App() {
             </ul>
           </div>
         </nav>
+        <div className='jumbotron'></div>
         <p className='projects'>
-          {projects.map((project, index)=>{
+          {projects.map((project, image, index)=>{
             console.log(project)
           return( 
             <li className='project-item'>
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-              {images.map((image, index)=>{
+                <img src={`http://127.0.0.1:8000${project.image}`}/>
+                
+              {/* {images.map((image, index)=>{
                 console.log(image)
-                // if(){
+                if(image.project == project.id){
               return( 
                 
-                  <img src={`http://127.0.0.1:8000${image.image}`}/>
+                  <img src={`http://127.0.0.1:8000${image.images}`}/>
                 
           
                 )
               }
             // }
-              )} 
+            })} */}
               
               </div>
               

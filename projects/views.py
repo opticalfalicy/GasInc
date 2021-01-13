@@ -48,7 +48,7 @@ def project_detail_view(request, project_id, *args, **kwargs):
 def project_list_view(request, *args, **kwargs):
     qs = Project.objects.all()
     # qsi = ProjectImage.objects.all()
-    print(qs)
+    print('qs', qs)
     # qsi = qs.image.all()
     serializer = ProjectSerializer(qs, many=True)
     return Response(serializer.data)

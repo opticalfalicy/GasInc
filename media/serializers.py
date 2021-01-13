@@ -18,4 +18,4 @@ class LogoSerializer(serializers.ModelSerializer):
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = LogoImage
-        fields = ['image']
+        fields = ['image', 'a']

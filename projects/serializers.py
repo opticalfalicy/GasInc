@@ -9,7 +9,7 @@ from .models import ProjectImage
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
-        fields = ['name', 'main_tag', 'id']
+        fields = ['model', 'make', 'image', 'id']
     # def validate_name(self, value):
     #     if len(value) > M_V_L:
     #         raise forms.ValidationError("The value is too long")
@@ -18,4 +18,4 @@ class ProjectSerializer(serializers.ModelSerializer):
 class ImageSerializer(serializers.ModelSerializer):
     class Meta:
         model = ProjectImage
-        fields = ['image']
+        fields = ['project', 'images']

@@ -6,15 +6,30 @@ from django.contrib import admin
 
 # Register your models here.
 
-from projects.models import Project, ProjectImage
-class ProjectImageInline(admin.TabularInline):
+# from projects.models import Project, ProjectImage
+from projects.models import Project
+from projects.models import ProjectImage
+# class ProjectImageInline(admin.TabularInline):
+    # model = Project
+    # extra = 3
+# @admin.register(Project)
+class ProjectImageAdmin(admin.StackedInline):
     model = ProjectImage
-    extra = 3
+    # extra
 @admin.register(Project)
-class PersonAdmin(admin.ModelAdmin):
-    pass
-    inlines = [ProjectImageInline,]
+class ProjectAdmin(admin.ModelAdmin):
+    inlines = [ProjectImageAdmin]
+    
+    class Meta:
+        model = Project
+@admin.register(ProjectImage)
+class ProjectImageAdmin(admin.ModelAdmin):
+    pass        
+# @admin.register(PersonAdmin)
+# class PersonAdmin(admin.ModelAdmin):
+#     pass
+    # inlines = [ProjectImageInline,]
 
 
 
-# admin.site.register(Project, PersonAdmin)
+# admin.site.register(PersonAdmin)
