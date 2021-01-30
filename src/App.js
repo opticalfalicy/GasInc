@@ -24,7 +24,7 @@ xhr.send()
 function loadMedia(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "https://gasinc.herokuapp.com/projects/"
+  const url = "https://gasinc.herokuapp.com/media/"
   // const url = "http://127.0.0.1:8000/media/"
   const responseType = "json"
   xhr.responseType = responseType
@@ -36,6 +36,7 @@ xhr.onload = function() {
 //   callback({"message": "invalid request"}, 400)
 // }
 // console.log('projects x', xhr)
+console.log('media xhr', xhr)
 xhr.send()
 }
 
@@ -54,7 +55,7 @@ xhr.onload = function() {
 // xhr.onerror = function (e) {
 //   callback({"message": "invalid request"}, 400)
 // }
-console.log('xhr', xhr)
+console.log('img xhr', xhr)
 xhr.send()
 }
 
@@ -102,7 +103,7 @@ function App() {
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <nav className='navbar'>
-          <div className='nav-logo'><img className='nav-logo-image' src={`http://127.0.0.1:8000/media/logos/croplogo.png`} /></div>
+          <div className='nav-logo'><img className='nav-logo-image' src={`https://gasinc.herokuapp.com/media/logos/croplogo.png`} /></div>
           <div className='nav-links'>
             <ul className='links-list'>
               <li className='list-item item-Projects'>Projects</li>
@@ -122,7 +123,7 @@ function App() {
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-                <img src={`http://127.0.0.1:8000/${project.image}`}/>
+                <img src={`https://gasinc.herokuapp.com/media/${project.image}`}/>
                 
               {/* {images.map((image, index)=>{
                 console.log(image)
