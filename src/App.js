@@ -122,7 +122,7 @@ function App() {
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-                <img src={`http://127.0.0.1:8000${project.image}`}/>
+                <img src={`http://127.0.0.1:8000/${project.image}`}/>
                 
               {/* {images.map((image, index)=>{
                 console.log(image)
