@@ -123,7 +123,7 @@ function App() {
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-                <img src={`https://gasinc.herokuapp.com/media/${project.image}`}/>
+                <img src={`https://gasinc.herokuapp.com${project.image}`}/>
                 
               {/* {images.map((image, index)=>{
                 console.log(image)
