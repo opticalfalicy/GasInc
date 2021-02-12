@@ -35,7 +35,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://127.0.0.1:8000',
     'https://gasinc.herokuapp.com',
-    'http://34.67.190.62:3389/',
+    'http://34.67.190.62:3389',
     'http://34.67.190.62',
 
 ]
