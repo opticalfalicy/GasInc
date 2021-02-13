@@ -36,7 +36,14 @@ DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost").split(",")
 
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://127.0.0.1:8000',
+    'https://gasinc.herokuapp.com',
+    'http://34.67.190.62:3389',
+    'http://34.67.190.62',
 
+]
 
 
 # Application definition
@@ -47,11 +54,22 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+        'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    
+    # third-party
+    'rest_framework',
+    # 'taggit',
+    'corsheaders',
+    # internal
+    'projects',
+#    'media',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,7 +78,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'django_app.urls'
+ROOT_URLCONF = 'gsibackend.urls'
 
 TEMPLATES = [
     {
@@ -78,7 +96,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_app.wsgi.application'
+WSGI_APPLICATION = 'gsibackend.wsgi.application'
 
 
 # Database
