@@ -30,11 +30,15 @@ SECRET_KEY = 'l@%fk!jdh&7_@qwkr99-3+@kaxdbta-z$d=l+wr4$1n=*@(y25'
 # SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", get_random_secret_key())
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG", "False") == "True"
+# DEBUG = os.getenv("DEBUG", "False") == "True"
 
-DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEBUG = "True"
 
-ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,gas-inc-9jjmh.ondigitalocean.app").split(",")
+# DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+
+# ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,gas-inc-9jjmh.ondigitalocean.app").split(",")
+
+ALLOWED_HOSTS = ['gas-inc-9jjmh.ondigitalocean.app']
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
@@ -42,7 +46,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://gasinc.herokuapp.com',
     'http://34.67.190.62:3389',
     'http://34.67.190.62',
-    'gas-inc-9jjmh.ondigitalocean.app',
+    'https://gas-inc-9jjmh.ondigitalocean.app',
 
 ]
 
