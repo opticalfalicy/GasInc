@@ -42,6 +42,7 @@ CORS_ORIGIN_WHITELIST = [
     'https://gasinc.herokuapp.com',
     'http://34.67.190.62:3389',
     'http://34.67.190.62',
+    'gas-inc-9jjmh.ondigitalocean.app',
 
 ]
 
