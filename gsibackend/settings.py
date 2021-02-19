@@ -34,7 +34,7 @@ SECRET_KEY = 'l@%fk!jdh&7_@qwkr99-3+@kaxdbta-z$d=l+wr4$1n=*@(y25'
 
 DEBUG = "True"
 
-# DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
+DEVELOPMENT_MODE = os.getenv("DEVELOPMENT_MODE", "False") == "True"
 
 # ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", "127.0.0.1,localhost,gas-inc-9jjmh.ondigitalocean.app").split(",")
 
