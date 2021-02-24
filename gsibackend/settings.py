@@ -29,14 +29,11 @@ SECRET_KEY = '5a&1y^2^f@l7vw^g+d#l8ivybc)#0+-&o_*8fzso*28e_^pbvx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', "gasinc.herokuapp.com", '34.67.190.62:3389', '34.67.190.62']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://127.0.0.1:8000',
-    'https://gasinc.herokuapp.com',
-    'http://34.67.190.62:3389/',
-    'http://34.67.190.62',
 
 ]
 

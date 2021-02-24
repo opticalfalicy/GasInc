@@ -6,8 +6,8 @@ import './App.css';
 function loadProjects(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "http://34.67.190.62:3389/projects/"
-  // const url = "http://127.0.0.1:8000/projects/"
+  // const url = "http://34.67.190.62:3389/projects/"
+  const url = "http://127.0.0.1:8000/projects/"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -24,8 +24,7 @@ xhr.send()
 function loadMedia(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "http://34.67.190.62:3389/media/"
-  // const url = "http://127.0.0.1:8000/media/"
+  const url = "http://127.0.0.1:8000/media/"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -44,8 +43,7 @@ xhr.send()
 function loadImages(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
-  const url = "http://34.67.190.62:3389/images/"
-  // const url = "http://127.0.0.1:8000/images"
+  const url = "http://127.0.0.1:8000/images"
   const responseType = "json"
   xhr.responseType = responseType
 xhr.open(method, url)
@@ -103,7 +101,7 @@ function App() {
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <nav className='navbar'>
-          <div className='nav-logo'><img className='nav-logo-image' src={`http://34.67.190.62:3389/media/logos/croplogo.png`} /></div>
+          <div className='nav-logo'><img className='nav-logo-image' src={`http://127.0.0.1:8000/media/logos/croplogo.png`} /></div>
           <div className='nav-links'>
             <ul className='links-list'>
               <li className='list-item item-Projects'>Projects</li>
@@ -123,7 +121,7 @@ function App() {
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-                <img src={`http://34.67.190.62:3389/${project.image}`}/>
+                <img src={`http://127.0.0.1:8000${project.image}`}/>
                 
               {/* {images.map((image, index)=>{
                 console.log(image)
