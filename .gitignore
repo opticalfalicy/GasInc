@@ -3,5 +3,3 @@ node_modules
 gsibackend/__pycache__/
 
 webpack-stats.json
-
-__pycache__/
