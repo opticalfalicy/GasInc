@@ -8,7 +8,7 @@ function loadProjects(callback){
   const method = 'GET' // 'POST'
 
   // Cloud URL
-  const url = "http://143.110.223.151/projects/"
+  const url = "http://159.203.37.196/projects/"
 
 
   // Local URL
@@ -30,7 +30,7 @@ function loadMedia(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
   // Cloud URL
-  const url = "http://143.110.223.151/media/"
+  const url = "http://159.203.37.196/media/"
 
 
   // Local URL
@@ -54,7 +54,7 @@ function loadImages(callback){
   const xhr = new XMLHttpRequest()
   const method = 'GET' // 'POST'
   // Cloud URL
-  const url = "http://143.110.223.151/images/"
+  const url = "http://159.203.37.196/images/"
 
 
   // Local URL
@@ -116,14 +116,14 @@ function App() {
       {/* <header className="App-header"> */}
         {/* <img src={logo} className="App-logo" alt="logo" /> */}
         <nav className='navbar'>
-          <div className='nav-logo'><img className='nav-logo-image' src={`143.110.223.151/media/logos/croplogo.png`} /></div>
+          <div className='nav-logo'><img className='nav-logo-image' src={`159.203.37.196/media/logos/croplogo.png`} /></div>
           <div className='nav-links'>
             <ul className='links-list'>
               <li className='list-item item-Projects'>Projects</li>
               <li className='list-item item-Services'>Services</li>
               <li className='list-item item-Blog'>Blog</li>
               <li className='list-item item-History'>History</li>
-              <li className='list-item item-Contact'>Contact</li>
+              <li className='list-item item-Contact'>Contact</li> 
             </ul>
           </div>
         </nav>
@@ -136,14 +136,14 @@ function App() {
               <div className='p-n'>{project.name}</div>
               <div className='p-mt'>{project.main_tag}</div>
               <div class='p-imgs'>
-                <img src={`143.110.223.151${project.image}`}/>
+                <img src={`159.203.37.196${project.image}`}/>
                 
               {/* {images.map((image, index)=>{
                 console.log(image)
                 if(image.project == project.id){
               return( 
                 
-                  <img src={`143.110.223.151${image.images}`}/>
+                  <img src={`159.203.37.196${image.images}`}/>
                 
           
                 )
