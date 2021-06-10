@@ -10,12 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
-import django_heroku
 
 from pathlib import Path
 from django.core.management.utils import get_random_secret_key
 import os
-from urlib.parse import urlparse
+from urllib.parse import urlparse
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -151,7 +150,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-django_heroku.settings(locals())
 
 
 # Static files (CSS, JavaScript, Images)
